@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-num = 0
-for i in range(10):
-	for n in range(num, 10):
-		if i == n:
-			continue
-		if i == 8 and n == 9:
-			print('{:d}{:d}'.format(i, n))
-		else:
-			print('{:d}{:d}'.format(i, n), end=', ')
-		num = num + 1
+"""
+for num1 in range(0, 10):
+    for num2 in range(num1 + 1, 10):
+        if num1 == 8 and num2 == 9:
+            print("{}{}".format(num1, num2))
+        else:
+            print("{}{}".format(num1, num2), end=", ")
