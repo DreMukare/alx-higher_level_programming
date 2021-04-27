@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-for int in range(0, 90):
-    if (int / 10) == (int % 10):
-        continue
-    elif (str(int / 10)) in (str(int)) and (str(int % 10)) in (str(int)):
-        continue
-    elif int != 89:
-        print('{:02d},'.format(int), end=' ')
-    else:
-        print('{}'.format(int))
+num = 0
+for i in range(10):
+	for n in range(num, 10):
+		if i == n:
+			continue
+		if i == 8 and n == 9:
+			print('{:d}{:d}'.format(i, n))
+		else:
+			print('{:d}{:d}'.format(i, n), end=', ')
+		num = num + 1
