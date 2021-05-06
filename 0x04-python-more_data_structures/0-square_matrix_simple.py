@@ -7,4 +7,4 @@ def square_matrix_simple(matrix=[]):
     while i < len(matrix):
         new_matrix.append(list(map(lambda x: x * x, matrix[i])))
         i += 1
-    return new_matrix    
+    return new_matrix
