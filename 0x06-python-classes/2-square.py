@@ -1,6 +1,21 @@
 #!/usr/bin/python3
+""" module contains: class Square """
+
+
 class Square:
+    """
+        Square: defines a square
+        Attributes:
+            size (no type or value identification): size of square
+        Method:
+            __init__: init of size attribute for each instance
+    """
+
     def __init__(self, size=0):
+        """ Initialization of attributes for instances
+            Args:
+                size (int): size of the square
+        """
         if not size.is_integer():
             raise TypeError('size must be an integer')
         elif size < 0:
