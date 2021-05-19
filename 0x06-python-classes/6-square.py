@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module 5-square: class Square """
+""" Module 6-square: class Square """
 
 
 class Square():
@@ -64,7 +64,7 @@ class Square():
             Returns:
                 nothing
         """
-        if isinstance(value, tuple):
+        if isinstance(value, tuple) and len(value) == 2:
             if isinstance(value[0], int) and isinstance(value[1], int):
                 if value[0] >= 0 and value[1] >= 0:
                     self.__position = value
@@ -85,7 +85,9 @@ class Square():
             print()
         else:
             i, j = 0, 0
+            temp = self.__position[0]
             for i in range(self.__size):
-                for j in range(self.__size):
-                    print("#", end="")
+                print()
+            for j in range(self.__size):
+                print("{}{}".format(' ' * temp, '#' * self.__size))
                 print()
