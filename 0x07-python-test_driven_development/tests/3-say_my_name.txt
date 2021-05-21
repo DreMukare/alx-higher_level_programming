@@ -1,0 +1,21 @@
+# 3-say_my_name.txt
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Check for clean input
+>>> say_my_name('John', 'Walker')
+My name is John Walker
+
+Check for only one name entered
+>>> say_my_name('John')
+My name is John
+
+Check for first name and last name
+>>> say_my_name(2, 'John')
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+>>> say_my_name('John', 3)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
