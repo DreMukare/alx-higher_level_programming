@@ -1,6 +1,7 @@
 The add_integer module
 ======================
 
+>> from ../0-add_integer.py import add_integer
 >>> add_integer(1, 2)
 3
 >>> add_integer(100, -2)
