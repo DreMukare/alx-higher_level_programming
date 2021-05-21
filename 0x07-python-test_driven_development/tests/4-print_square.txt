@@ -1,0 +1,44 @@
+# 4-print_square.txt
+
+>>> print_square = __import__('4-print_square').print_square
+
+Checking for correct input
+>>> print_square(4)
+####
+####
+####
+####
+
+Checking for float
+>>> print_square(4.0)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+Checking for negative float
+>>> print_square(-4.0)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+Checking for negative int
+>>> print_square(-1)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+Checking for different type
+>>> print_square('yes')
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+Checking for overflow
+>>> print_square(float('inf))
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+>>> print_square(float('-inf'))
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
