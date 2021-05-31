@@ -145,8 +145,6 @@ class Rectangle:
             raise TypeError('rect_1 must be an instance of Rectangle')
         if not isinstance(rect_2, Rectangle):
             raise TypeError('rect_2 must be an instane of Rectangle')
-        area_1 = rect_1.__width * rect_1.__height
-        area_2 = rect_2.__width * rect_2.__height
-        if area_1 == area_2 or area_1 > area_2:
+        if rect_1.area == rect_2.area or rect_1.area > rect_2.area:
             return rect_1
         return rect_2
