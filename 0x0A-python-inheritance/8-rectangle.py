@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """ 8-rectangle: class Rectangle """
-
-
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
 
 class Rectangle(BaseGeometry):
     """
@@ -19,8 +18,8 @@ class Rectangle(BaseGeometry):
                 width(int): width of rectangle
                 height(int): height of rectangle
         """
-        BaseGeometry.integer_validator(width)
+        self.integer_validator(width)
         self.__width = width
 
-        BaseGeometry.integer_validator(height)
+        self.integer_validator(height)
         self.__height = height
