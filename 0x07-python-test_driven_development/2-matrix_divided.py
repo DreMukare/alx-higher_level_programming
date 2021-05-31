@@ -12,7 +12,9 @@ def matrix_divided(matrix, div):
             matrix with divided elements
     """
     if not all(isinstance(matrix, list)):
-        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+        raise TypeError(
+            'matrix must be a matrix (list of lists)of integers/floats'
+             )
     """ if all lists are of the same length """
     it = iter(matrix)
     length = len(next(it))
@@ -21,8 +23,11 @@ def matrix_divided(matrix, div):
     """ checking for list values """
     for lst in matrix:
         for num in lst:
-            if type(num) not int [int, float] or num is None:
-                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+            if type(num) not in [int, float] or num is None:
+                raise TypeError(
+                    'matrix must be a matrix (list of lists)'
+                    ' of integers/floats'
+                     )
     """ checking for div """
     if type(div) not in [int, float] or div is None:
         raise TypeError('div must be a number')
