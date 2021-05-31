@@ -115,4 +115,3 @@ class Rectangle:
             return rectangle
         rectangle = 'Rectangle({}, {})'.format(self.__width, self.__height)
         return rectangle
-        
