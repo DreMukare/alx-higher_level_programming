@@ -12,5 +12,4 @@ try:
 except FileNotFoundError:
     content = []
     content.extend(sys.argv)
-
-save_to_json_file(content, 'add_item.json')
+    save_to_json_file(content, 'add_item.json')
