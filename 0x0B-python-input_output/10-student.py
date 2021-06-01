@@ -22,6 +22,7 @@ class Student:
         """
             retrieves dict representation of instances
         """
-        if attrs and all(isinstance(s, str) for s in attrs):
-            return attrs.__dict__
+        if isinstance(attrs, list) and all(
+                isinstance(s, str) for s in attrs):
+            return {el: getattr(self, el) for el in attrs if hasattr(self, el)}
         return self.__dict__
