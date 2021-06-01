@@ -9,4 +9,4 @@ def from_json_string(my_str):
         Args:
             my_str: string to be decoded
     """
-    return json.load(my_str, sort_keys=True)
+    return json.loads(my_str)
