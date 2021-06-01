@@ -11,5 +11,5 @@ try:
     content = load_from_json_file('add_item.json')
 except FileNotFoundError:
     content = []
-    content.extend(sys.argv)
+    content.extend(sys.argv[1:])
     save_to_json_file(content, 'add_item.json')
