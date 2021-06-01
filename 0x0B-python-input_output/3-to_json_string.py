@@ -9,5 +9,4 @@ def to_json_string(my_obj):
         Args:
             my_obj: object to be serialized
     """
-    json_rep = json.dumps(my_obj)
-    return json_rep
+    return json.dumps(my_obj)
