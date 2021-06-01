@@ -9,5 +9,4 @@ def load_from_json_file(filename):
             filename: file to be read
     """
     with open(filename) as f:
-        data = json.load(content)
-    return data
+        return json.load(content)
