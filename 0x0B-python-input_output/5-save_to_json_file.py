@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+""" 6-save_to_json_file: def save_to_json_file """
 import json
-""" 5-save_to_json_file: def save_to_json_file """
 
 
 def save_to_json_file(my_obj, filename):
