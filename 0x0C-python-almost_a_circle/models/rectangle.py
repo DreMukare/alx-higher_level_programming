@@ -42,7 +42,7 @@ class Rectangle(Base):
     def width(self):
         """ returns width """
         return self.__width
- 
+
     @width.setter
     def width(self, value):
         """ setter function for width """
@@ -104,3 +104,9 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print('#', end='')
             print()
+
+    def __str__(self):
+        """ prints string representation of Rectangle instance """
+        return '[Rectangle] ({}) {}/{} - {}/{}'.\
+            format(super().__init__(id), self.__x, self.__y, self.__width
+                   self.__height)
