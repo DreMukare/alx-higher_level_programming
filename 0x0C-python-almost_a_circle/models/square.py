@@ -18,7 +18,7 @@ class Square(Rectangle):
     def __str__(self):
         """ string representation of Square """
         return '[Square] ({}) {}/{} - {}'.format(
-            super.__init__(id), self.__x, self.__y, self.__size)
+            self.id, self.__x, self.__y, self.__size)
 
     @property
     def size(self):
@@ -37,11 +37,11 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """ updates values for instances of Square """
-        if args and args is not None:
-            super().__init__(id) = arg_1
-            self.__size = arg_2
-            self.__x = arg_3
-            self.__y = arg_4
+        if args is not None:
+            self.id = arg[0]
+            self.__size = arg[1]
+            self.__x = arg[2]
+            self.__y = arg[3]
         else:
             for k, v in kwargs.items():
                 setattr(self, k, v)
@@ -49,7 +49,7 @@ class Square(Rectangle):
     def to_dictionary(self):
         """ returns dictionary representation of Square instance """
         return {
-            'id': super().__init__(id),
+            'id': self.id,
             'size': self.__size,
             'x': self.__x,
             'y': self.__y
