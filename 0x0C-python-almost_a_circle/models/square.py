@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ square: class Square """
-Rectangle = __import__('rectangle').Rectangle
-
+from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """
