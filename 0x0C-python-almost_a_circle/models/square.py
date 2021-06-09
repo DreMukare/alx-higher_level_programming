@@ -17,7 +17,7 @@ class Square(Rectangle):
     def __str__(self):
         """ string representation of Square """
         return '[Square] ({}) {}/{} - {}'.format(
-            self.id, self.__x, self.__y, self.__size)
+            self.id, self.x, self.y, self.size)
 
     @property
     def size(self):
@@ -27,10 +27,6 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """ setter for Square size """
-        if not isinstance(value, int):
-            raise TypeError('width must be an integer')
-        if value <= 0:
-            raise ValueError('width must be > 0')
         self.width = value
         self.height = value
 
