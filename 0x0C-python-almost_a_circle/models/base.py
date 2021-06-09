@@ -30,3 +30,14 @@ class Base:
                 not all(type(item) == dict for item in list_dictionaries)):
             raise TypeError("list_dictionaries must be a list of dictionaries")
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """ writes the JSON representation of list_objs to a file """
+        filename = cls.__name__ + '.json'
+        list_of_dicts = []
+        for item in list_objs:
+            list_of_dicts.append(item.to_dictionary())
+        jsonstr = cls.to_json_string(list_of_dicts)
+        with open(filename, 'w') as f:
+            f.write(jsonstr)
