@@ -50,8 +50,14 @@ class Square(Rectangle):
     def update(self, *args, *kwargs):
         """ assigns attributes """
         if args is None or len(args) == 0:
-            for k, v in kwargs.items():
-                setattr(self, k, v)
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+            if 'size' in kwargs:
+                self.size = kwargs['size']
+            if 'x' in kwargs:
+                self.x = kwargs['x']
+            if 'y' in kwargs:
+                self.y = kwargs['y']
         try:
             self.id = args[0]
             self.size = args[1]
