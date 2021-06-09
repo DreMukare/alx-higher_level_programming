@@ -27,7 +27,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """ string representation of Square instance """
-        return ("[Square] ({}) {}/{} - {}/{}".format
+        return ("[Square] ({}) {}/{} - {}".format
                 (self.id, self.x, self.y, self.size))
 
     def update(self, *args, **kwargs):
