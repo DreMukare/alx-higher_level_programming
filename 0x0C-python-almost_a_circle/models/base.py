@@ -70,6 +70,6 @@ class Base:
            content = cls.from_json_string(f.read())
        
        instance_list = []
-       for item in content:
-           instance_list.append(cls.create(**item))
+       for k, v in enumerate(content):
+           instance_list.append(cls.create(**content[k]))
        return instance_list
