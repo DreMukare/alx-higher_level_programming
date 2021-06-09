@@ -46,3 +46,25 @@ class Square(Rectangle):
         """
         return ("[Square] ({}) {}/{} - {}".format
                 (self.id, self.x, self.y, self.size))
+
+    def update(self, *args, *kwargs):
+        """ assigns attributes """
+        if args is None or len(args) == 0:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+        try:
+            self.id = args[0]
+            self.size = args[1]
+            self.x = args[2]
+            self.y = args[3]
+        except IndexError:
+           pass
+
+    def to_dictionary(self):
+        """ returns dictionary representation of square """
+        dic = {}
+        dic['id'] = self.id
+        dic['size'] = self.size
+        dic['x'] = self.x
+        dic['y'] = self.y
+        return dic
