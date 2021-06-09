@@ -10,12 +10,16 @@ class Rectangle(Base):
         """ Instantiation of instance attributes"""
 
         super().__init__(id)
+        if type(self.__width) != int:
+            raise TypeError("width must be an integer")
+        if self.__width <= 0
+            raise ValueError("width must be > 0")
         self.__width = width
-        self.__height = height
         if type(self.__height) != int:
             raise TypeError("height must be an integer")
         if self.__height <= 0:
             raise ValueError("height must be > 0")
+        self.__height = height
         self.__x = x
         self.__y = y
 
