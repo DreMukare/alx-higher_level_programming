@@ -13,17 +13,17 @@ class Square(Rectangle):
     """
     def __init__(self, size, x=0, y=0, id=None):
         """ initializes values for all instances of Square """
-        super.__init__(width, height, x, y, id)
+        super.__init__(size, size, x, y, id)
 
     def __str__(self):
         """ string representation of Square """
         return '[Square] ({}) {}/{} - {}'.format(
-            super.__init__(id), self.__x, self.__y, self.__width)
+            super.__init__(id), self.__x, self.__y, self.__size)
 
     @property
     def size(self):
         """ getter for Square size """
-        return self.__width
+        return self.__size
 
     @size.setter
     def size(self, value):
