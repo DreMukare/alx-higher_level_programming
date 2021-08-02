@@ -1,6 +1,5 @@
 #!/usr/bin/node
-const sortedArray = [...process.argv];
-sortedArray.splice(0, 2);
+const sortedArray = [...process.argv].splice(0, 2);
 let tempVar;
 if (process.argv.length <= 3) {
   console.log(1);
