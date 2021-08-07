@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-takes in an arg and displaes all values in the table
+takes in an arg and displays all values in the table
 state where in db hbtn_0e_usa where name matches arg
 '''
 
