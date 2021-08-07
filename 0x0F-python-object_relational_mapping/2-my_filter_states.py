@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
-    lists all states with a name starting with N
-    from the database hbtn_0e_0_usa
+takes in an arg and displaes all values in the table
+state where in db hbtn_0e_usa where name matches arg
 '''
 
 import MySQLdb
@@ -15,8 +15,8 @@ if __name__ == '__main__':
         passwd=argv[2],
         db=argv[3])
     cur = db.cursor()
-    query = 'SELECT * FROM states WHERE name LIKE {:s}\
-    ORDER BY id ASC'.format(argv[4])
+    query = """SELECT * FROM states WHERE name LIKE {:s}\
+    ORDER BY id ASC""".format(argv[4])
     cur.execute(query)
     for row in cur.fetchall():
         print(row)
