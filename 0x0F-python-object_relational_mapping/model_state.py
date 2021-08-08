@@ -30,4 +30,4 @@ if __name__ == '__main__':
                     nullable=False,
                     primary_key=True)
         name = Column(String(128), nullable=False)
-    Base.metadata.create_all(engine)
+    Base.metadata.create_all(bind=engine)
