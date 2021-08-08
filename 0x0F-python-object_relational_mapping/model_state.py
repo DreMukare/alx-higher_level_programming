@@ -6,10 +6,10 @@ Base = declarative_base()
 
 from sys import argv
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine,
-Column,
-Integer,
-String
+from sqlalchemy import (create_engine,
+    Column,
+    Integer,
+    String)
 
 if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
