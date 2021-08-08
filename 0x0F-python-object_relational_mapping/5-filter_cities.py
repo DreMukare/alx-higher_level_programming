@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
-takes in an arg and displays all values in the table
-state where in db hbtn_0e_usa where name matches arg
+takes in name of state as an arg and lists
+all cities of that state using the db hbtn_0e_4_usa
 '''
 
 import MySQLdb
@@ -18,11 +18,5 @@ if __name__ == "__main__":
     cities.state_id = states.id WHERE states.name LIKE %(state_name)s\
     ORDER BY cities.id ASC", {'state_name': argv[4]})
     res = cur.fetchall()
-    i = 0
-    while i < len(res):
-        if i != (len(res) - 1):
-            print(res[i][0], end=', ')
-        else:
-            print(res[i][0])
-        i = i + 1
+    print(', '.join(row[0] for row in res))
     db.close()
