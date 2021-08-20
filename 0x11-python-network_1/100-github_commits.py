@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 '''
-gets 10 latest commits
+gets 10 latest commits of a github repo
 
-usage: ./100-github_commits.py <username> <rails>
+usage: ./100-github_commits.py <repo name> <owner>
 '''
 from sys import argv
 import requests
