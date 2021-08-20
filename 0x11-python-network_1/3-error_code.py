@@ -13,7 +13,7 @@ from urllib.error import HTTPError
 if __name__ == '__main__':
     url = argv[1]
     req = Request(url)
-    try: 
+    try:
         with urlopen(req) as res:
             print(res.read().decode('utf-8'))
     except HTTPError as e:
