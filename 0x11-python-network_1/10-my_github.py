@@ -7,11 +7,9 @@ usage: ./10-my_github.py <username> <auth_token>
 '''
 from sys import argv
 import requests
-# from requests.auth import HTTPBasicAuth
+from requests.auth import HTTPBasicAuth
 
 if __name__ == '__main__':
-    username = argv[1]
-    pwd = argv[2]
-    res = requests.get('https://api.github.com/user', auth=(username, auth))
-#    res = requests.request('GET', 'https://apit.github.com/user', (username, pwd))
+    auth = HTTPBasicAuth(argv[1], argv[2])
+    res = requests.get('https://api.github.com/user', auth=auth)
     print(res.json().get('id'))
