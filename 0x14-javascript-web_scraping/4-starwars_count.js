@@ -6,7 +6,7 @@
 const request = require('request');
 
 const id = '18';
-const url = 'https://swapi-api.hbtn.io/api/films';
+const url = 'https://swapi-api.hbtn.io/api/films/';
 
 request(url, (err, res, body) => {
   if (err) console.log(err);
